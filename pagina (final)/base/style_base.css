@@ -1,0 +1,103 @@
+body{
+  margin: 0;
+  background: #222;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+
+.container{ /*barra nav*/
+  width: 80%;
+  margin-left: 2%;
+}
+
+header {
+  background: rgba(179, 2, 2, 1);
+  position: relative;
+  width: 100%;
+}
+
+header::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo{
+  float: left;
+  width: 95px;
+  height: 95px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+nav{
+  float: right;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li{ /*aliniacion opciones*/
+  display:inline-block;
+  margin-left: 35px;
+  padding-top: 45px;
+  position: relative;
+}
+
+nav ul li a{ /*opciones*/
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+}
+
+nav a:hover{
+  color: #000;
+}
+
+nav a::before{ /*transicion de barra nav*/
+  content: " ";
+  display: block;
+  height: 5px;
+  width: 0%;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  top: 0;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before{
+  width: 100%;
+}
+
+.buttons-redes{
+  min-width: 600px;
+  display: flex;
+  align-self: baseline;
+  position: fixed;
+  bottom: 3%;
+    
+}
+  
+.buttons-redes a {
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  line-height: 60px;
+  text-align: center;
+  background: #314652;
+  color: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  transition: all .4s ease-in-out;
+}
+  
+.buttons-redes a:hover {
+  transform: scale(1.5);
+}
